@@ -1,0 +1,46 @@
+# cd
+alias ..='cd ..'
+
+# ls
+alias ls="ls -F"
+alias l="ls -lAh"
+alias ll="ls -l"
+alias la='ls -A'
+
+# git
+alias gl='git pull'
+alias gp='git push'
+alias gd='git diff'
+alias gc='git commit'
+alias gca='git commit -a'
+alias go='git checkout'
+alias gb='git branch'
+alias gs='git status'
+alias grm="git add -u"
+alias changelog='git log `git log -1 --format=%H -- CHANGELOG*`..; cat CHANGELOG*'
+alias gu='git reset HEAD --'
+alias gush='git push origin `git rev-parse --abbrev-ref HEAD` && git push builder `git rev-parse --abbrev-ref HEAD`'
+
+# rails
+alias sc='script/console'
+alias ss='script/server'
+alias sg='script/generate'
+alias a='autotest -rails'
+alias tlog='tail -f log/development.log'
+alias migrate='rake db:migrate db:test:clone'
+alias rst='touch tmp/restart.txt'
+
+# bundler
+alias b='bundle'
+alias be='bundle exec'
+alias ber='bundle exec rake'
+alias bec='bundle exec cucumber'
+
+# rvm
+alias ru='rvm use'
+
+# commands starting with % for pasting from web
+alias %=' '
+
+# OS X specific aliases
+alias octave="exec '/Applications/Octave.app/Contents/Resources/bin/octave'"

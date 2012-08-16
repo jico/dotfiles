@@ -1,0 +1,8 @@
+. ~/.zsh/aliases
+
+# changing directory to code project
+function c { cd ~/code/$1; }
+function dev { cd ~/Developer/$1; }
+
+# misc
+alias reload='. ~/.bash_profile'

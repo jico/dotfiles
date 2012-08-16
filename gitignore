@@ -1,0 +1,7 @@
+*~
+.svn
+.swp
+*.sw[nomp]
+.DS_Store
+custom.vim
+.netrwhist

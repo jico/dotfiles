@@ -1,0 +1,30 @@
+[hub]
+        protocol = https
+[user]
+        name = Jico Baligod
+        email = jico@baligod.com
+[credential]
+        helper = osxkeychain
+[alias]
+        co = checkout
+        ci = commit
+        hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[color]
+        diff = auto
+        status = auto
+        branch = auto
+        ui = true
+[core]
+        excludesfile = ~/.gitignore
+        editor = vim
+      	autocrlf = input
+[apply]
+        whitespace = nowarn
+[format]
+      	pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
+[mergetool]
+        keepBackup = false
+[difftool]
+        prompt = false
+[help]
+        autocorrect = 1
