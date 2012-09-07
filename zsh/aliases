@@ -35,7 +35,7 @@ alias b='bundle'
 alias be='bundle exec'
 alias ber='bundle exec rake'
 alias bec='bundle exec cucumber'
-alias bec='bundle exec rspec -fdoc'
+alias bes='bundle exec rspec -fdoc'
 
 # rvm
 alias ru='rvm use'
