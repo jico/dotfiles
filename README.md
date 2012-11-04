@@ -77,7 +77,7 @@ The following key bindings do not require you to send the prefix keystroke:
 
 ## Vim Customization
 
-Please put your custom setting in a `custom.vim` file at the root of the dotfile directory
+Please put your custom setting in a `.custom.vim` file at the root of the dotfile directory
 
 ## Thanks
 
