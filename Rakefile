@@ -2,8 +2,7 @@ require 'rake'
 
 desc "install the dotfiles into user's home directory"
 task :install do
-  system 'git submodule init && git submodule update --init'
-  install_oh_my_zsh
+  system 'git submodule init && git submodule update'
 
   replace_all = false
   Dir['*'].each do |file|
@@ -33,6 +32,9 @@ task :install do
       link_file(file)
     end
   end
+
+  # Change shell to zsh
+  system 'chsh -s /bin/zsh' unless ENV['SHELL'] =~ /\/zsh$/
 end
 
 desc "uninstall the dotfiles from the user's home directory"
@@ -41,13 +43,14 @@ task :uninstall do
   print "Are you sure you wish to continue? [yN] "
   exit unless STDIN.gets.chomp.downcase == 'y'
 
-  print "uninstall oh-my-zsh? [yN] "
-  uninstall_oh_my_zsh if STDIN.gets.chomp.downcase == 'y'
+  print "remove oh-my-zsh? [yN] "
+  uninstall_oh_my_zsh = false unless STDIN.gets.chomp.downcase == 'y'
 
   Dir['*'].each do |file|
     local_file_path = File.join(ENV['HOME'], ".#{file}")
 
     next if %w[Rakefile README.md LICENSE].include? file
+    next if file == "oh-my-zsh" && uninstall_oh_my_zsh
     if File.exist?(local_file_path)
       puts "unlinking ~/.#{file}"
       system %Q{rm -rf "#{local_file_path}"}
@@ -63,13 +66,4 @@ end
 def link_file(file)
   puts "linking ~/.#{file}"
   system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
-end
-
-def install_oh_my_zsh
-  system 'git clone git://github.com/jico/oh-my-zsh.git ~/.oh-my-zsh'
-  system 'chsh -s /bin/zsh' unless ENV['SHELL'] =~ /\/zsh$/
-end
-
-def uninstall_oh_my_zsh
-  system %Q{rm -rf "$HOME/.oh-my-zsh"}
 end

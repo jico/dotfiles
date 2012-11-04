@@ -77,3 +77,6 @@
 [submodule "vim/bundle/cucumber-align-pipes"]
 	path = vim/bundle/cucumber-align-pipes
 	url = git@github.com:quentindecock/vim-cucumber-align-pipes.git
+[submodule "oh-my-zsh"]
+	path = oh-my-zsh
+	url = git@github.com:jico/oh-my-zsh.git
