@@ -70,3 +70,7 @@
   path = vim/bundle/tabular
   url = git://github.com/godlygeek/tabular.git
   ignore = dirty
+[submodule "vim/bundle/screen"]
+	path = vim/bundle/screen
+	url = git://github.com/ervandew/screen.git
+  ignore = dirty
