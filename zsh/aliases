@@ -40,6 +40,11 @@ alias bes='bundle exec rspec -fdoc'
 # rvm
 alias ru='rvm use'
 
+# node
+alias npmc='node_modules/cucumber/bin/cucumber.js'
+alias npmcf='node_modules/coffee-script/bin/coffee'
+alias npms='npm run-script spec'
+
 # commands starting with % for pasting from web
 alias %=' '
 
