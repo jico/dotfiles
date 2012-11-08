@@ -9,6 +9,7 @@
   co = checkout
   ci = commit
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  mine = log --author=jico
 [color]
   diff = auto
   status = auto
