@@ -27,8 +27,6 @@
   keepBackup = false
 [difftool]
   prompt = false
-[help]
-  autocorrect = 1
 [push]
   default = tracking
 [branch]
