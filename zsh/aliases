@@ -43,7 +43,11 @@ alias ru='rvm use'
 # node
 alias npmc='node_modules/cucumber/bin/cucumber.js'
 alias npmcf='node_modules/coffee-script/bin/coffee'
+alias npmh='node_modules/hem/bin/hem'
 alias npms='npm run-script spec'
+
+# misc
+alias grr='grep -Ri'
 
 # commands starting with % for pasting from web
 alias %=' '
