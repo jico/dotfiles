@@ -11,6 +11,8 @@ ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load.
 ZSH_THEME="bolt"
 
+DISABLE_AUTO_UPDATE="true"
+
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
