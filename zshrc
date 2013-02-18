@@ -33,13 +33,16 @@ platform=`uname`
 # tell grep to highlight matches
 export GREP_OPTIONS='--color=auto'
 
-# OS X specific stuff
 if [[ "$platform" == "Darwin" ]]; then
+  # OS X specific stuff
   CC=/usr/bin/gcc-4.2
   export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
 
   # load grc for pretty colors
   source "`brew --prefix grc`/etc/grc.bashrc"
+else
+  # zsh autocorrect fix
+  unsetopt correct_all
 fi
 
 hitch() {
@@ -47,4 +50,3 @@ hitch() {
   if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
 }
 alias unhitch='hitch -u'
-
