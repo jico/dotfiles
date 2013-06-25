@@ -25,7 +25,7 @@ plugins=(git osx brew ruby rvm node npm)
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/bin:/usr/X11/bin:/usr/games:$HOME/.bin:/bin:/sbin:/usr/texbin:$HOME/.rvm/bin:/usr/local/rvm/bin:/usr/local/share/python
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/bin:/usr/X11/bin:/usr/games:$HOME/.bin:/bin:/sbin:/usr/texbin:$HOME/.rvm/bin:/usr/local/rvm/bin:/usr/local/share/python:node_modules/.bin:/usr/local/share/npm/bin
 
 platform=`uname`
 
@@ -38,7 +38,7 @@ export GREP_OPTIONS='--color=auto'
 if [[ "$platform" == "Darwin" ]]; then
   # OS X specific stuff
   CC=/usr/bin/gcc-4.2
-  export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules
+  export NODE_PATH=$NODE_PATH:/usr/local/lib/node_modules:/usr/local/share/npm/bin:/usr/local/share/npm/lib/node_modules
 
   # load grc for pretty colors
   source "`brew --prefix grc`/etc/grc.bashrc"
